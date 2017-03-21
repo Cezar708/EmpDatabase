@@ -1,0 +1,24 @@
+{
+  "name": "EmpData",
+  "description": "The admin microservice of EmpData",
+  "website": "http://www.forestadmin.com/lumber",
+  "repository": "https://github.com/ForestAdmin/lumber",
+  "env": {
+    "FOREST_AUTH_SECRET": {
+      "description": "A random JWT signing secret to protect your admin API",
+      "value": "d2ba2b1c8d5b5ccd82ea1e79ca29aa90ab34af4c4e3bafe37c17d4aa62b6586ba0455b8d3ba9962fa49f40e267519490"
+    },
+    "FOREST_ENV_SECRET": {
+      "description": "The Forest environment secret",
+      "value": "3241f036f5064b4786a29099fd94d9145e1112111605f6c991b04d5f5c7ceb25"
+    },
+    "DATABASE_URL": {
+      "description": "The remote database connection URL",
+      "value": "postgres://<user>:<password>@<host>:<port>/<databaseName>"
+    },
+    "SSL_DATABASE": {
+      "description": "Specify if a SSL database connection is required.",
+      "value": "true"
+    }
+  }
+}
