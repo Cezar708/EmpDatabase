@@ -5,7 +5,10 @@ var Sequelize = require('sequelize');
 
 let databaseOptions = {
   logging: process.env.NODE_ENV === 'development' ? console.log : false,
-  pool: { maxConnections: 10, minConnections: 1 }
+  // Sequelize expects `pool` options to be named `max` and `min`.
+  // Using `maxConnections` and `minConnections` leaves the pool
+  // configuration ineffective and can exhaust database connections.
+  pool: { max: 10, min: 1 }
 };
 
 if (process.env.SSL_DATABASE) {
